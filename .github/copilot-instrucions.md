@@ -2,6 +2,11 @@
 
 Este documento establece las reglas y mejores prácticas para el desarrollo con Next.js 16 en este proyecto.
 
+## Package Manager
+- **Requerido**: Usar `pnpm` como gestor de paquetes
+- NO usar `npm` ni `yarn` en ningún caso
+- Usar `pnpm dlx` para ejecutar paquetes temporalmente (equivalente a `npx`)
+
 ## Arquitectura y Router
 
 ### App Router (Requerido)
