@@ -100,7 +100,7 @@ export default function RoomsSection() {
         <Carousel
           opts={{
             align: "start",
-            loop: true,
+            loop: false,
           }}
           className="w-full max-w-7xl mx-auto"
         >
@@ -110,17 +110,18 @@ export default function RoomsSection() {
                 key={index}
                 className="pl-2 sm:pl-4 md:pl-6 basis-full sm:basis-1/2 lg:basis-1/3"
               >
-                <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group h-full flex flex-col">
+                <Card className="overflow-hidden hover:shadow-xl hover:border-border/60 transition-all duration-500 ease-out group hover:-translate-y-1 backdrop-blur-sm h-full flex flex-col">
                   <CardHeader className="p-0 relative overflow-hidden">
                     <Image
                       src={room.image}
                       alt={room.title}
                       width={416}
                       height={250}
-                      className="w-full h-[200px] sm:h-[220px] md:h-[250px] object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-[200px] sm:h-[220px] md:h-[250px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                      style={{ height: "auto" }}
                     />
                     {room.badge && (
-                      <Badge className="absolute top-3 sm:top-4 left-3 sm:left-4 text-xs">
+                      <Badge className="absolute top-3 sm:top-4 left-3 sm:left-4 text-xs backdrop-blur-sm bg-primary/90">
                         {room.badge}
                       </Badge>
                     )}
