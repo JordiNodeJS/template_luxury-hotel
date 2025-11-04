@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-16 mb-12">
           {/* Column 1 - Brand */}
           <div className="lg:col-span-2">
-            <Link href="#home" className="flex items-center gap-2 mb-6 group">
+            <Link href="/" className="flex items-center gap-2 mb-6 group">
               <Image
                 src="/images/logo.png"
                 alt="logo"
@@ -70,18 +70,23 @@ export default function Footer() {
           <div>
             <h6 className="text-lg font-bold mb-6">Explore Links</h6>
             <ul className="space-y-3">
-              {["Home", "About Us", "Rooms", "Services", "Blog", "Contact"].map(
-                (item) => (
-                  <li key={item}>
-                    <Link
-                      href={`#${item.toLowerCase().replace(/\s+/g, "")}`}
-                      className="text-gray-400 hover:text-yellow-400 hover:underline transition-all duration-300 inline-block"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                )
-              )}
+              {[
+                { name: "Home", href: "/" },
+                { name: "About Us", href: "/about" },
+                { name: "Rooms", href: "/rooms" },
+                { name: "Services", href: "/services" },
+                { name: "Blog", href: "/blog" },
+                { name: "Contact", href: "/contact" },
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-gray-400 hover:text-yellow-400 hover:underline transition-all duration-300 inline-block"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -99,7 +104,7 @@ export default function Footer() {
               ].map((item) => (
                 <li key={item}>
                   <Link
-                    href="#services"
+                    href="/services"
                     className="text-gray-400 hover:text-yellow-400 hover:underline transition-all duration-300 inline-block"
                   >
                     {item}

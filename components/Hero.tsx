@@ -56,14 +56,14 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-4">
               <a
-                href="#rooms"
+                href="/rooms"
                 className="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transition-all hover:shadow-md font-semibold text-[15.2px] inline-flex items-center gap-2"
               >
                 Explore Rooms
                 <ArrowRight size={20} />
               </a>
               <a
-                href="#about"
+                href="/about"
                 className="bg-transparent text-white px-8 py-3 rounded-full hover:bg-white/10 transition-all font-semibold text-[15.2px] border border-white/30"
               >
                 Learn More

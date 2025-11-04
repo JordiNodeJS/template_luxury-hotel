@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -10,6 +11,7 @@ import { cn } from "@/lib/utils";
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,12 +23,12 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About Us", href: "#about" },
-    { name: "Rooms & Suites", href: "#rooms" },
-    { name: "Services", href: "#services" },
-    { name: "Blog", href: "#blog" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Rooms & Suites", href: "/rooms" },
+    { name: "Services", href: "/services" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -39,7 +41,7 @@ export default function Navbar() {
       <div className="container mx-auto px-3 max-w-[1320px]">
         <div className="flex items-center justify-between h-full">
           {/* Logo */}
-          <Link href="#home" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center gap-2 group">
             <Image
               src="/images/logo.png"
               alt="Luxury Hotel"
@@ -54,16 +56,29 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6 xl:gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="relative text-indigo-500 hover:text-indigo-600 transition-colors font-medium group px-4 py-2"
-              >
-                {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={cn(
+                    "relative transition-colors font-medium group px-4 py-2",
+                    isActive
+                      ? "text-indigo-600"
+                      : "text-indigo-500 hover:text-indigo-600"
+                  )}
+                >
+                  {link.name}
+                  <span
+                    className={cn(
+                      "absolute -bottom-1 left-0 h-0.5 bg-indigo-500 transition-all duration-300",
+                      isActive ? "w-full" : "w-0 group-hover:w-full"
+                    )}
+                  ></span>
+                </Link>
+              );
+            })}
           </div>
 
           {/* Book Now Button */}
@@ -91,16 +106,24 @@ export default function Navbar() {
         {isMobileMenuOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-gray-200">
             <div className="flex flex-col gap-4 mt-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-gray-900 hover:text-indigo-500 transition-colors font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={cn(
+                      "transition-colors font-medium",
+                      isActive
+                        ? "text-indigo-600"
+                        : "text-gray-900 hover:text-indigo-500"
+                    )}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
               <Button
                 asChild
                 size="default"
