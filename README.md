@@ -6,6 +6,8 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38bdf8)](https://tailwindcss.com/)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com)
 
+[Live demo — template-luxury-hotel.vercel.app](https://template-luxury-hotel.vercel.app/)
+
 > **97% visual similarity achieved** - A pixel-perfect clone of a luxury hotel website built with modern web technologies.
 
 ![Luxury Hotel Preview](./docs/screenshots/FINAL_CLONE_PRODUCTION_READY.png)
