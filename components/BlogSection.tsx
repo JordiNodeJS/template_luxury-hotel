@@ -66,7 +66,7 @@ export default function BlogSection() {
           {posts.map((post, index) => (
             <Card
               key={index}
-              className="overflow-hidden hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+              className="overflow-hidden hover:shadow-xl hover:border-border/60 transition-all duration-500 ease-out group hover:-translate-y-1 backdrop-blur-sm"
             >
               <CardHeader className="p-0 relative h-56 overflow-hidden">
                 <Image
@@ -74,9 +74,11 @@ export default function BlogSection() {
                   alt={post.title}
                   width={400}
                   height={300}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
-                <Badge className="absolute top-4 left-4">{post.category}</Badge>
+                <Badge className="absolute top-4 left-4 backdrop-blur-sm bg-primary/90">
+                  {post.category}
+                </Badge>
               </CardHeader>
 
               <CardContent className="p-6 lg:p-8 space-y-4">
