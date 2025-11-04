@@ -66,7 +66,7 @@ Clona una página web original de forma iterativa, utilizando componentes de sha
    - **Mapea enlaces a destinos:** Para cada enlace del menú, identifica:
      - El texto del enlace (ej: "Home", "Rooms", "Services", "About", "Contact")
      - La URL de destino en la página original (ej: "/", "/rooms", "/services", "/about", "/contact")
-     - Si el enlace es un ancla dentro de la misma página (ej: "#hero", "#services") o una ruta a otra página
+     - Si el enlace es un ancla dentro de la misma página (ej: anclas como "hero", "services") o una ruta a otra página
    - **Verifica estructura de páginas:** Navega a cada enlace del menú usando `navigate_page` para identificar:
      - Qué secciones están en páginas diferentes
      - Qué secciones están en la misma página con anclas
