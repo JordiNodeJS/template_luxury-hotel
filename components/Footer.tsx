@@ -13,9 +13,12 @@ import {
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-3 max-w-[1320px]">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-16 mb-12">
+    <footer
+      id="contact"
+      className="bg-gray-900 text-white py-12 sm:py-16 lg:py-20"
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 md:gap-12 lg:gap-16 mb-12">
           {/* Column 1 - Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-6 group">
@@ -26,50 +29,52 @@ export default function Footer() {
                 height={40}
                 className="w-10 h-10 transition-transform group-hover:scale-110"
               />
-              <span className="text-xl font-bold text-primary">
+              <span className="text-lg sm:text-xl font-bold text-primary">
                 Luxury Hotel
               </span>
             </Link>
-            <p className="text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-gray-400 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
               Vive una experiencia de lujo y confort sin igual en nuestro resort
               de clase mundial. Cada momento está diseñado a la perfección para
               tu máxima satisfacción y disfrute absoluto.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3 sm:gap-4">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300"
+                className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300"
                 aria-label="Facebook"
               >
-                <Facebook size={20} />
+                <Facebook size={18} className="sm:w-5 sm:h-5" />
               </a>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300"
+                className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300"
                 aria-label="Instagram"
               >
-                <Instagram size={20} />
+                <Instagram size={18} className="sm:w-5 sm:h-5" />
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300"
+                className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300"
                 aria-label="LinkedIn"
               >
-                <Linkedin size={20} />
+                <Linkedin size={18} className="sm:w-5 sm:h-5" />
               </a>
             </div>
           </div>
 
           {/* Column 2 - Explore Links */}
           <div>
-            <h6 className="text-lg font-bold mb-6">Enlaces Rápidos</h6>
-            <ul className="space-y-3">
+            <h6 className="text-base sm:text-lg font-bold mb-4 sm:mb-6">
+              Enlaces Rápidos
+            </h6>
+            <ul className="space-y-2 sm:space-y-3">
               {[
                 { name: "Inicio", href: "/" },
                 { name: "Nosotros", href: "/about" },
@@ -81,7 +86,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-muted-foreground hover:text-primary hover:underline transition-all duration-300 inline-block"
+                    className="text-gray-400 hover:text-primary hover:underline transition-all duration-300 inline-block text-sm sm:text-base"
                   >
                     {item.name}
                   </Link>
@@ -92,8 +97,10 @@ export default function Footer() {
 
           {/* Column 3 - Services */}
           <div>
-            <h6 className="text-lg font-bold mb-6">Servicios</h6>
-            <ul className="space-y-3">
+            <h6 className="text-base sm:text-lg font-bold mb-4 sm:mb-6">
+              Servicios
+            </h6>
+            <ul className="space-y-2 sm:space-y-3">
               {[
                 "Spa & Wellness",
                 "Gastronomía Gourmet",
@@ -105,7 +112,7 @@ export default function Footer() {
                 <li key={item}>
                   <Link
                     href="/services"
-                    className="text-muted-foreground hover:text-primary hover:underline transition-all duration-300 inline-block"
+                    className="text-gray-400 hover:text-primary hover:underline transition-all duration-300 inline-block text-sm sm:text-base"
                   >
                     {item}
                   </Link>
@@ -116,8 +123,10 @@ export default function Footer() {
 
           {/* Column 4 - Support & Contact */}
           <div>
-            <h6 className="text-lg font-bold mb-6">Soporte</h6>
-            <ul className="space-y-3 mb-8">
+            <h6 className="text-base sm:text-lg font-bold mb-4 sm:mb-6">
+              Soporte
+            </h6>
+            <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
               {[
                 "Centro de Ayuda",
                 "Política de Privacidad",
@@ -129,7 +138,7 @@ export default function Footer() {
                 <li key={item}>
                   <Link
                     href="#"
-                    className="text-muted-foreground hover:text-primary hover:underline transition-all duration-300 inline-block"
+                    className="text-gray-400 hover:text-primary hover:underline transition-all duration-300 inline-block text-sm sm:text-base"
                   >
                     {item}
                   </Link>
@@ -137,17 +146,22 @@ export default function Footer() {
               ))}
             </ul>
 
-            <h6 className="text-lg font-bold mb-6">Información de Contacto</h6>
-            <ul className="space-y-4 text-muted-foreground">
-              <li className="flex items-start gap-3 hover:text-foreground transition-colors">
-                <MapPin size={20} className="flex-shrink-0 mt-1 text-primary" />
+            <h6 className="text-base sm:text-lg font-bold mb-4 sm:mb-6">
+              Información de Contacto
+            </h6>
+            <ul className="space-y-3 sm:space-y-4 text-gray-400 text-sm sm:text-base">
+              <li className="flex items-start gap-3 hover:text-gray-200 transition-colors">
+                <MapPin
+                  size={18}
+                  className="sm:w-5 sm:h-5 flex-shrink-0 mt-1 text-primary"
+                />
                 <span>
                   Avenida del Lujo 123
                   <br />
                   Isla Paraíso, IP 12345
                 </span>
               </li>
-              <li className="flex items-center gap-3 hover:text-foreground transition-colors">
+              <li className="flex items-center gap-3 hover:text-gray-200 transition-colors">
                 <Phone size={20} className="flex-shrink-0 text-primary" />
                 <span>+34 (555) 123-4567</span>
               </li>

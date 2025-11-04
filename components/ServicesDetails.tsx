@@ -152,26 +152,26 @@ export default function ServicesDetails() {
             </div>
 
             <div className="grid grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-2xl border-2 border-gray-200 hover:border-yellow-400 hover:shadow-lg transition-all duration-300">
-                <div className="w-12 h-12 bg-yellow-500/10 rounded-full flex items-center justify-center text-yellow-600 mb-4">
+              <div className="bg-card p-6 rounded-2xl border border-border hover:border-primary hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4">
                   <Award size={24} />
                 </div>
-                <h5 className="text-lg font-bold text-gray-900 mb-2">
+                <h5 className="text-lg font-bold text-foreground mb-2">
                   Top 5 en Europa
                 </h5>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Clasificado entre los 5 mejores hoteles de lujo de Europa por
                   la revista Travel & Leisure.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-2xl border-2 border-gray-200 hover:border-yellow-400 hover:shadow-lg transition-all duration-300">
-                <div className="w-12 h-12 bg-yellow-500/10 rounded-full flex items-center justify-center text-yellow-600 mb-4">
+              <div className="bg-card p-6 rounded-2xl border border-border hover:border-primary hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4">
                   <Wifi size={24} />
                 </div>
-                <h5 className="text-lg font-bold text-gray-900 mb-2">
+                <h5 className="text-lg font-bold text-foreground mb-2">
                   WiFi de Alta Velocidad
                 </h5>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Acceso gratuito a internet de alta velocidad en todas las
                   áreas del resort.
                 </p>

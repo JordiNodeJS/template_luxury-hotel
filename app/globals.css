@@ -32,13 +32,13 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: var(--font-inter), 'Inter', system-ui, sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-playfair), 'Playfair Display', serif;
     font-weight: 600;
     line-height: 1.2;
     letter-spacing: -0.02em;

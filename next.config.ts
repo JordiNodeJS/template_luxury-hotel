@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
     // Formatos modernos de imagen (en orden de preferencia)
     formats: ["image/avif", "image/webp"],
 
+    // Calidades configuradas para evitar warnings
+    qualities: [75, 85, 90, 100],
+
     // Tamaños de imagen para diferentes dispositivos
     // Estos tamaños se usan para generar el srcset en imágenes responsive
     deviceSizes: [

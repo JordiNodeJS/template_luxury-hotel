@@ -27,10 +27,10 @@ export default function BookingForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+    <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+      <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
         <div>
-          <label className="block text-sm font-medium mb-2">
+          <label className="block text-xs sm:text-sm font-medium mb-2">
             Fecha de Entrada
           </label>
           <Input
@@ -38,11 +38,11 @@ export default function BookingForm() {
             value={checkIn}
             onChange={(e) => setCheckIn(e.target.value)}
             required
-            className="h-12"
+            className="h-11 sm:h-12"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-2">
+          <label className="block text-xs sm:text-sm font-medium mb-2">
             Fecha de Salida
           </label>
           <Input
@@ -50,18 +50,20 @@ export default function BookingForm() {
             value={checkOut}
             onChange={(e) => setCheckOut(e.target.value)}
             required
-            className="h-12"
+            className="h-11 sm:h-12"
           />
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+      <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
         <div>
-          <label className="block text-sm font-medium mb-2">Adultos</label>
+          <label className="block text-xs sm:text-sm font-medium mb-2">
+            Adultos
+          </label>
           <select
             value={adults}
             onChange={(e) => setAdults(e.target.value)}
-            className="w-full px-4 h-12 border rounded-md focus:ring-2 focus:ring-primary bg-background"
+            className="w-full px-3 sm:px-4 h-11 sm:h-12 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent outline-none bg-background text-sm transition-all"
           >
             <option value="1">1 Adulto</option>
             <option value="2">2 Adultos</option>
@@ -70,11 +72,13 @@ export default function BookingForm() {
           </select>
         </div>
         <div>
-          <label className="block text-sm font-medium mb-2">Niños</label>
+          <label className="block text-xs sm:text-sm font-medium mb-2">
+            Niños
+          </label>
           <select
             value={children}
             onChange={(e) => setChildren(e.target.value)}
-            className="w-full px-4 h-12 border rounded-md focus:ring-2 focus:ring-primary bg-background"
+            className="w-full px-3 sm:px-4 h-11 sm:h-12 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent outline-none bg-background text-sm transition-all"
           >
             <option value="0">0 Niños</option>
             <option value="1">1 Niño</option>
@@ -84,8 +88,8 @@ export default function BookingForm() {
         </div>
       </div>
 
-      <Button type="submit" className="w-full" size="lg">
-        <Search size={20} />
+      <Button type="submit" className="w-full text-sm sm:text-base" size="lg">
+        <Search size={18} className="sm:w-5 sm:h-5" />
         Buscar Disponibilidad
       </Button>
     </form>

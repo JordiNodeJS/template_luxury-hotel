@@ -77,17 +77,20 @@ export default function RoomsSection() {
     <section
       ref={ref}
       id="rooms"
-      className={cn("bg-background py-12 fade-in-up", isInView && "in-view")}
+      className={cn(
+        "bg-background py-12 sm:py-16 lg:py-20 fade-in-up",
+        isInView && "in-view"
+      )}
     >
-      <div className="container mx-auto px-3 max-w-[1320px]">
-        <div className="text-center mb-12 lg:mb-16">
-          <Badge variant="outline" className="mb-3">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <Badge variant="outline" className="mb-3 text-xs sm:text-sm">
             SUITES DE LUJO EXCLUSIVAS
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
             Reserva tu Escapada de Ensueño
           </h2>
-          <p className="text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto px-4">
             Descubre nuestra colección de habitaciones y suites diseñadas
             meticulosamente para ofrecerte el máximo confort, elegancia y
             exclusividad
@@ -101,49 +104,49 @@ export default function RoomsSection() {
           }}
           className="w-full max-w-7xl mx-auto"
         >
-          <CarouselContent className="-ml-4 md:-ml-6">
+          <CarouselContent className="-ml-2 sm:-ml-4 md:-ml-6">
             {rooms.map((room, index) => (
               <CarouselItem
                 key={index}
-                className="pl-4 md:pl-6 md:basis-1/2 lg:basis-1/3"
+                className="pl-2 sm:pl-4 md:pl-6 basis-full sm:basis-1/2 lg:basis-1/3"
               >
-                <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 group h-full">
+                <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group h-full flex flex-col">
                   <CardHeader className="p-0 relative overflow-hidden">
                     <Image
                       src={room.image}
                       alt={room.title}
                       width={416}
                       height={250}
-                      className="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-[200px] sm:h-[220px] md:h-[250px] object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     {room.badge && (
-                      <Badge className="absolute top-4 left-4">
+                      <Badge className="absolute top-3 sm:top-4 left-3 sm:left-4 text-xs">
                         {room.badge}
                       </Badge>
                     )}
                   </CardHeader>
 
-                  <CardContent className="p-6 lg:p-8 space-y-4">
+                  <CardContent className="p-4 sm:p-6 lg:p-8 space-y-3 sm:space-y-4 flex-1 flex flex-col">
                     <Rating
                       rating={room.rating}
                       showValue={true}
                       reviews={room.reviews}
-                      size={16}
+                      size={14}
                     />
 
-                    <h4 className="text-xl md:text-2xl font-semibold">
+                    <h4 className="text-lg sm:text-xl md:text-2xl font-semibold">
                       {room.title}
                     </h4>
 
-                    <p className="text-sm md:text-base text-muted-foreground">
+                    <p className="text-xs sm:text-sm md:text-base text-muted-foreground flex-1">
                       {room.description}
                     </p>
 
-                    <div className="flex flex-wrap gap-3 pt-2">
+                    <div className="flex flex-wrap gap-2 sm:gap-3 pt-2">
                       {room.amenities.map((amenity, i) => (
                         <div
                           key={i}
-                          className="flex items-center gap-2 text-sm"
+                          className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm"
                         >
                           {amenity.icon}
                           <span>{amenity.text}</span>
@@ -152,14 +155,16 @@ export default function RoomsSection() {
                     </div>
                   </CardContent>
 
-                  <CardFooter className="flex items-center justify-between pt-4 px-6 lg:px-8 pb-6 lg:pb-8 border-t">
+                  <CardFooter className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 pt-4 px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 lg:pb-8 border-t mt-auto">
                     <div className="flex items-baseline gap-1">
-                      <span className="text-3xl font-bold">${room.price}</span>
-                      <span className="text-base text-muted-foreground">
+                      <span className="text-2xl sm:text-3xl font-bold">
+                        ${room.price}
+                      </span>
+                      <span className="text-sm sm:text-base text-muted-foreground">
                         / noche
                       </span>
                     </div>
-                    <Button asChild>
+                    <Button asChild size="default" className="w-full sm:w-auto">
                       <Link href="#booking">Reservar Ahora</Link>
                     </Button>
                   </CardFooter>
@@ -167,8 +172,8 @@ export default function RoomsSection() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-12" />
-          <CarouselNext className="hidden md:flex -right-12" />
+          <CarouselPrevious className="hidden md:flex -left-8 lg:-left-12" />
+          <CarouselNext className="hidden md:flex -right-8 lg:-right-12" />
         </Carousel>
       </div>
     </section>
