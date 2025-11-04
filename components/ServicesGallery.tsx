@@ -101,9 +101,14 @@ export default function ServicesGallery() {
                 <div className="w-16 h-16 bg-yellow-500/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 group-hover:bg-yellow-500/40 group-hover:scale-110 transition-all duration-300">
                   {service.icon}
                 </div>
-                <h5 className="text-xl font-bold mb-1 group-hover:text-yellow-300 transition-colors">
-                  {service.title}
-                </h5>
+                
+                {/* Title with slide-up animation from bottom on hover */}
+                <div className="relative overflow-hidden h-16">
+                  <h5 className="text-xl font-bold mb-1 absolute inset-x-0 translate-y-20 group-hover:translate-y-0 group-hover:text-yellow-300 transition-all duration-500 ease-out">
+                    {service.title}
+                  </h5>
+                </div>
+                
                 <p className="text-sm opacity-90">{service.subtitle}</p>
               </div>
             </div>
