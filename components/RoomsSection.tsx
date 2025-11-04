@@ -110,7 +110,7 @@ export default function RoomsSection() {
                 key={index}
                 className="pl-2 sm:pl-4 md:pl-6 basis-full sm:basis-1/2 lg:basis-1/3"
               >
-                <Card className="overflow-hidden hover:shadow-xl hover:border-border/60 transition-all duration-500 ease-out group hover:-translate-y-1 backdrop-blur-sm h-full flex flex-col">
+                <Card className="hover:shadow-xl hover:border-border/60 transition-all duration-500 ease-out group hover:-translate-y-1 backdrop-blur-sm h-full flex flex-col">
                   <CardHeader className="p-0 relative overflow-hidden">
                     <Image
                       src={room.image}
@@ -118,7 +118,6 @@ export default function RoomsSection() {
                       width={416}
                       height={250}
                       className="w-full h-[200px] sm:h-[220px] md:h-[250px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                      style={{ height: "auto" }}
                     />
                     {room.badge && (
                       <Badge className="absolute top-3 sm:top-4 left-3 sm:left-4 text-xs backdrop-blur-sm bg-primary/90">
@@ -156,7 +155,7 @@ export default function RoomsSection() {
                     </div>
                   </CardContent>
 
-                  <CardFooter className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 pt-4 px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 lg:pb-8 border-t mt-auto">
+                  <CardFooter className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 pt-4 px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 lg:pb-8 border-t border-border/20 mt-auto">
                     <div className="flex items-baseline gap-1">
                       <span className="text-2xl sm:text-3xl font-bold">
                         ${room.price}
@@ -173,8 +172,8 @@ export default function RoomsSection() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-8 lg:-left-12" />
-          <CarouselNext className="hidden md:flex -right-8 lg:-right-12" />
+          <CarouselPrevious className="flex -left-2 sm:-left-4 md:-left-8 lg:-left-12 h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
+          <CarouselNext className="flex -right-2 sm:-right-4 md:-right-8 lg:-right-12 h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
         </Carousel>
       </div>
     </section>

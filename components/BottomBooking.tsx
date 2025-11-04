@@ -27,7 +27,7 @@ export default function BottomBooking() {
   };
 
   return (
-    <section id="booking" className="relative py-20 overflow-hidden">
+    <section id="booking" className="relative py-20  overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
