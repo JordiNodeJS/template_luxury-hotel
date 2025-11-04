@@ -16,49 +16,49 @@ export default function ServicesGallery() {
   const services = [
     {
       title: "Spa & Wellness",
-      subtitle: "Rejuvenating treatments",
+      subtitle: "Tratamientos rejuvenecedores",
       image: "/images/services/service0.jpg",
       icon: <Sparkles size={24} />,
     },
     {
-      title: "Fine Dining",
-      subtitle: "Gourmet cuisine",
+      title: "Gastronomía Gourmet",
+      subtitle: "Cocina de autor",
       image: "/images/services/service1.jpg",
       icon: <UtensilsCrossed size={24} />,
     },
     {
-      title: "Pool & Beach",
-      subtitle: "Infinity pool & private beach",
+      title: "Piscina y Playa",
+      subtitle: "Piscina infinita y playa privada",
       image: "/images/services/service2.jpg",
       icon: <Waves size={24} />,
     },
     {
-      title: "Fitness Center",
-      subtitle: "State-of-the-art equipment",
+      title: "Centro Fitness",
+      subtitle: "Equipamiento de última generación",
       image: "/images/services/service3.jpg",
       icon: <Dumbbell size={24} />,
     },
     {
-      title: "Business Center",
-      subtitle: "Meeting & conference facilities",
+      title: "Centro de Negocios",
+      subtitle: "Salas de reuniones y conferencias",
       image: "/images/services/service4.jpg",
       icon: <Briefcase size={24} />,
     },
     {
-      title: "Yacht Charter",
-      subtitle: "Luxury yacht experiences",
+      title: "Alquiler de Yates",
+      subtitle: "Experiencias náuticas de lujo",
       image: "/images/services/service5.jpg",
       icon: <Ship size={24} />,
     },
     {
-      title: "Fishing Charter",
-      subtitle: "Luxury yacht experiences",
+      title: "Pesca Deportiva",
+      subtitle: "Charter de pesca exclusivo",
       image: "/images/services/service6.jpg",
       icon: <Fish size={24} />,
     },
     {
-      title: "Yacht Charter",
-      subtitle: "Luxury yacht experiences",
+      title: "Excursiones Marítimas",
+      subtitle: "Tours privados en yate",
       image: "/images/services/service7.jpg",
       icon: <Anchor size={24} />,
     },
@@ -69,13 +69,13 @@ export default function ServicesGallery() {
       <div className="container mx-auto px-3 max-w-[1320px]">
         <div className="text-center mb-12">
           <p className="text-yellow-600 font-semibold mb-3 tracking-wider uppercase text-sm">
-            BEST SERVICES
+            SERVICIOS PREMIUM
           </p>
           <h2
             className="text-[35.2px] leading-[1.2] font-bold text-[rgb(51,51,51)] mb-4"
             style={{ fontWeight: 700 }}
           >
-            Explore Our Hotel Services
+            Explora Nuestros Servicios de Lujo
           </h2>
         </div>
 
@@ -101,14 +101,14 @@ export default function ServicesGallery() {
                 <div className="w-16 h-16 bg-yellow-500/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 group-hover:bg-yellow-500/40 group-hover:scale-110 transition-all duration-300">
                   {service.icon}
                 </div>
-                
+
                 {/* Title with slide-up animation from bottom on hover */}
                 <div className="relative overflow-hidden h-16">
                   <h5 className="text-xl font-bold mb-1 absolute inset-x-0 translate-y-20 group-hover:translate-y-0 group-hover:text-yellow-300 transition-all duration-500 ease-out">
                     {service.title}
                   </h5>
                 </div>
-                
+
                 <p className="text-sm opacity-90">{service.subtitle}</p>
               </div>
             </div>

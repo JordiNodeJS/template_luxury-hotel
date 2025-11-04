@@ -7,23 +7,23 @@ export default function AboutSection() {
   const features = [
     {
       icon: <Headset size={32} />,
-      title: "24/7 Concierge",
-      description: "Round-the-clock personalized service",
+      title: "Atención 24/7",
+      description: "Servicio personalizado las 24 horas del día",
     },
     {
       icon: <Wifi size={32} />,
-      title: "Free High-Speed WiFi",
-      description: "Stay connected throughout your stay",
+      title: "WiFi de Alta Velocidad",
+      description: "Conexión premium en todas las áreas",
     },
     {
       icon: <Plane size={32} />,
-      title: "Airport Transfer",
-      description: "Complimentary luxury transportation",
+      title: "Traslado VIP",
+      description: "Transporte de lujo desde el aeropuerto",
     },
     {
       icon: <UtensilsCrossed size={32} />,
-      title: "Fine Dining",
-      description: "World-class culinary experiences",
+      title: "Gastronomía de Autor",
+      description: "Experiencias culinarias excepcionales",
     },
   ];
 
@@ -35,12 +35,13 @@ export default function AboutSection() {
             className="text-3xl md:text-4xl lg:text-[35.2px] leading-[1.2] font-bold text-[rgb(51,51,51)] mb-4"
             style={{ fontWeight: 700 }}
           >
-            Your Trip Begins with Our Reservation
+            Tu Experiencia Comienza con Nuestra Excelencia
           </h2>
           <p className="text-base lg:text-[16px] leading-relaxed text-[rgb(55,65,81)] max-w-3xl mx-auto">
-            Experience seamless booking and exceptional service from the moment
-            you plan your stay. Our dedicated team ensures every detail is
-            perfect.
+            Desde el primer contacto hasta el último momento de tu estadía,
+            nuestro equipo se dedica a crear experiencias memorables que superan
+            todas tus expectativas. Cada detalle cuenta en tu viaje hacia el
+            lujo absoluto.
           </p>
         </div>
 

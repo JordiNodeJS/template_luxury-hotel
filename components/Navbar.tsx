@@ -23,12 +23,12 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
-    { name: "Rooms & Suites", href: "/rooms" },
-    { name: "Services", href: "/services" },
+    { name: "Inicio", href: "/" },
+    { name: "Nosotros", href: "/about" },
+    { name: "Habitaciones", href: "/rooms" },
+    { name: "Servicios", href: "/services" },
     { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contacto", href: "/contact" },
   ];
 
   return (
@@ -88,7 +88,7 @@ export default function Navbar() {
               size="default"
               className="bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-700 hover:to-yellow-600 text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
-              <Link href="#booking">Book Now</Link>
+              <Link href="#booking">Reservar</Link>
             </Button>
           </div>
 
@@ -133,7 +133,7 @@ export default function Navbar() {
                   href="#booking"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Book Now
+                  Reservar
                 </Link>
               </Button>
             </div>

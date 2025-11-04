@@ -22,18 +22,18 @@ export default function TestimonialsSection() {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Verified Guest",
+      name: "María González",
+      role: "Huésped Verificado",
       image: "/images/testimonials/testimonial1.png",
       rating: 5,
-      text: "An absolutely incredible experience! The service was impeccable, the rooms were stunning, and the yacht charter was the highlight of our honeymoon. We can't wait to return!",
+      text: "Una experiencia absolutamente maravillosa. El servicio fue impecable, las suites eran impresionantes y el charter en yate fue el punto culminante de nuestra luna de miel. ¡Volveremos sin duda!",
     },
     {
-      name: "Michael Chen",
-      role: "Verified Guest",
+      name: "Carlos Rodríguez",
+      role: "Huésped Verificado",
       image: "/images/testimonials/testimonial2.jpg",
       rating: 5,
-      text: "Luxury redefined! From the moment we arrived, every detail was perfect. The spa treatments were divine, and the ocean view from our suite was breathtaking. Highly recommended!",
+      text: "El lujo redefinido en su máxima expresión. Desde nuestra llegada, cada detalle fue perfecto. Los tratamientos de spa fueron divinos y la vista al océano desde nuestra suite era simplemente espectacular. ¡Altamente recomendado!",
     },
   ];
 
@@ -48,17 +48,17 @@ export default function TestimonialsSection() {
       <div className="container mx-auto px-3 max-w-[1320px]">
         <div className="text-center mb-12 lg:mb-16">
           <p className="text-yellow-600 font-semibold mb-3 tracking-wider uppercase text-sm">
-            OUR TESTIMONIALS
+            TESTIMONIOS DE NUESTROS HUÉSPEDES
           </p>
           <h2
             className="text-3xl md:text-4xl lg:text-[35.2px] leading-[1.2] font-bold text-[rgb(51,51,51)] mb-4"
             style={{ fontWeight: 700 }}
           >
-            What Our Clients Say About Our Yachts
+            Lo que Dicen Nuestros Clientes
           </h2>
           <p className="text-base lg:text-[16px] leading-relaxed text-[rgb(55,65,81)] max-w-3xl mx-auto">
-            Read what our guests have to say about their unforgettable
-            experiences
+            Descubre las experiencias inolvidables que nuestros huéspedes han
+            vivido y lo que opinan sobre su estancia en nuestro resort de lujo
           </p>
         </div>
 

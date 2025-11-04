@@ -23,7 +23,7 @@ export default function BookingForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log({ checkIn, checkOut, adults, children });
-    alert("Searching for availability...");
+    alert("Buscando disponibilidad...");
   };
 
   return (
@@ -31,7 +31,7 @@ export default function BookingForm() {
       <div className="grid md:grid-cols-2 gap-4 md:gap-6">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
-            Check-in Date
+            Fecha de Entrada
           </label>
           <Input
             type="date"
@@ -43,7 +43,7 @@ export default function BookingForm() {
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
-            Check-out Date
+            Fecha de Salida
           </label>
           <Input
             type="date"
@@ -58,32 +58,32 @@ export default function BookingForm() {
       <div className="grid md:grid-cols-2 gap-4 md:gap-6">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
-            Adults
+            Adultos
           </label>
           <select
             value={adults}
             onChange={(e) => setAdults(e.target.value)}
             className="w-full px-4 h-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-background"
           >
-            <option value="1">1 Adult</option>
-            <option value="2">2 Adults</option>
-            <option value="3">3 Adults</option>
-            <option value="4">4 Adults</option>
+            <option value="1">1 Adulto</option>
+            <option value="2">2 Adultos</option>
+            <option value="3">3 Adultos</option>
+            <option value="4">4 Adultos</option>
           </select>
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
-            Children
+            Niños
           </label>
           <select
             value={children}
             onChange={(e) => setChildren(e.target.value)}
             className="w-full px-4 h-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-background"
           >
-            <option value="0">0 Children</option>
-            <option value="1">1 Child</option>
-            <option value="2">2 Children</option>
-            <option value="3">3 Children</option>
+            <option value="0">0 Niños</option>
+            <option value="1">1 Niño</option>
+            <option value="2">2 Niños</option>
+            <option value="3">3 Niños</option>
           </select>
         </div>
       </div>
@@ -94,7 +94,7 @@ export default function BookingForm() {
         size="lg"
       >
         <Search size={20} />
-        Search Availability
+        Buscar Disponibilidad
       </Button>
     </form>
   );

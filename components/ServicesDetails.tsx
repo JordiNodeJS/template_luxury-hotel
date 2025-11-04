@@ -9,17 +9,18 @@ export default function ServicesDetails() {
       <div className="container mx-auto px-3 max-w-[1320px]">
         <div className="text-center mb-12">
           <p className="text-yellow-600 font-semibold mb-3 tracking-wider uppercase text-sm">
-            OUR SERVICES
+            NUESTROS SERVICIOS
           </p>
           <h2
             className="text-[35.2px] leading-[1.2] font-bold text-[rgb(51,51,51)] mb-4"
             style={{ fontWeight: 700 }}
           >
-            Explore Our Hotel Services
+            Descubre Nuestras Amenidades Exclusivas
           </h2>
           <p className="text-[16px] leading-relaxed text-[rgb(55,65,81)] max-w-3xl mx-auto">
-            Discover a world of luxury amenities and personalized services
-            designed to exceed your expectations.
+            Explora un mundo de comodidades de lujo y servicios personalizados
+            diseñados especialmente para superar todas tus expectativas y crear
+            momentos inolvidables.
           </p>
         </div>
 
@@ -80,12 +81,13 @@ export default function ServicesDetails() {
                   </svg>
                 </div>
                 <h5 className="text-2xl font-bold text-gray-900">
-                  Infinity Pool
+                  Piscina Infinita
                 </h5>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Stunning infinity pool overlooking the ocean with poolside
-                service and private cabanas.
+                Impresionante piscina infinita con vistas al océano, servicio de
+                bar junto a la piscina y cabañas privadas para tu máximo
+                confort.
               </p>
             </div>
 
@@ -106,17 +108,19 @@ export default function ServicesDetails() {
                     />
                   </svg>
                 </div>
-                <h5 className="text-2xl font-bold text-gray-900">Luxury Spa</h5>
+                <h5 className="text-2xl font-bold text-gray-900">
+                  Spa de Lujo
+                </h5>
               </div>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                World-class spa treatments using premium products and ancient
-                wellness techniques.
+                Tratamientos de spa de nivel mundial con productos premium y
+                técnicas ancestrales de bienestar para tu relajación total.
               </p>
               <a
                 href="#"
                 className="inline-flex items-center gap-2 text-yellow-600 hover:text-yellow-700 font-medium group/link"
               >
-                Learn More
+                Conocer Más
                 <ArrowRight
                   size={18}
                   className="group-hover/link:translate-x-1 transition-transform"
@@ -128,18 +132,18 @@ export default function ServicesDetails() {
               <div className="flex items-center gap-4 mb-4">
                 <Award className="text-yellow-600 flex-shrink-0" size={32} />
                 <h4 className="text-xl font-bold text-gray-900">
-                  VIP Services
+                  Servicios VIP
                 </h4>
               </div>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Exclusive VIP treatment with personal butler service and premium
-                amenities.
+                Tratamiento VIP exclusivo con servicio de mayordomo personal y
+                amenidades premium diseñadas para tu máximo disfrute.
               </p>
               <a
                 href="#"
                 className="inline-flex items-center gap-2 text-yellow-600 hover:text-yellow-700 font-medium group/link"
               >
-                Learn More
+                Conocer Más
                 <ArrowRight
                   size={18}
                   className="group-hover/link:translate-x-1 transition-transform"
@@ -153,11 +157,11 @@ export default function ServicesDetails() {
                   <Award size={24} />
                 </div>
                 <h5 className="text-lg font-bold text-gray-900 mb-2">
-                  Top 5 in Europe
+                  Top 5 en Europa
                 </h5>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  Ranked among the top 5 luxury hotels in Europe by Travel &
-                  Leisure magazine.
+                  Clasificado entre los 5 mejores hoteles de lujo de Europa por
+                  la revista Travel & Leisure.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-2xl border-2 border-gray-200 hover:border-yellow-400 hover:shadow-lg transition-all duration-300">
@@ -165,11 +169,11 @@ export default function ServicesDetails() {
                   <Wifi size={24} />
                 </div>
                 <h5 className="text-lg font-bold text-gray-900 mb-2">
-                  High Speed WiFi
+                  WiFi de Alta Velocidad
                 </h5>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  Complimentary high-speed internet access throughout the
-                  property.
+                  Acceso gratuito a internet de alta velocidad en todas las
+                  áreas del resort.
                 </p>
               </div>
             </div>

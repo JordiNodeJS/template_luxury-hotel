@@ -23,7 +23,7 @@ export default function BottomBooking() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Searching for availability...");
+    alert("Buscando disponibilidad...");
   };
 
   return (
@@ -48,11 +48,11 @@ export default function BottomBooking() {
       <div className="container mx-auto px-3 relative z-10 max-w-[1320px]">
         <div className="text-center text-white mb-8">
           <h3 className="text-[28px] font-bold mb-3">
-            Ready for Your Dream Vacation?
+            ¿Listo para tus Vacaciones de Ensueño?
           </h3>
           <p className="text-[16px] text-gray-200">
-            Book your luxury escape today and create memories that last a
-            lifetime
+            Reserva tu escapada de lujo hoy y crea recuerdos que durarán toda la
+            vida
           </p>
         </div>
 
@@ -64,7 +64,7 @@ export default function BottomBooking() {
             <div>
               <label className="block text-sm font-medium text-white mb-2">
                 <Calendar className="inline mr-2" size={16} />
-                Check-in
+                Entrada
               </label>
               <Input
                 type="date"
@@ -78,7 +78,7 @@ export default function BottomBooking() {
             <div>
               <label className="block text-sm font-medium text-white mb-2">
                 <Calendar className="inline mr-2" size={16} />
-                Check-out
+                Salida
               </label>
               <Input
                 type="date"
@@ -92,7 +92,7 @@ export default function BottomBooking() {
             <div>
               <label className="block text-sm font-medium text-white mb-2">
                 <Users className="inline mr-2" size={16} />
-                Adults
+                Adultos
               </label>
               <select
                 value={adults}
@@ -109,7 +109,7 @@ export default function BottomBooking() {
             <div>
               <label className="block text-sm font-medium text-white mb-2">
                 <Baby className="inline mr-2" size={16} />
-                Children
+                Niños
               </label>
               <select
                 value={children}
@@ -130,7 +130,7 @@ export default function BottomBooking() {
             className="w-full md:w-auto mt-6 md:mt-8 bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-700 hover:to-yellow-600 text-white shadow-xl hover:shadow-2xl transition-all duration-300 h-12 px-12"
           >
             <Search className="mr-2" size={20} />
-            Search Availability
+            Buscar Disponibilidad
           </Button>
         </form>
       </div>

@@ -14,11 +14,11 @@ export default function ContactPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <div className="text-center mb-12 lg:mb-16">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-                Get in Touch
+                Contáctanos
               </h1>
               <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-                Have questions? We&apos;re here to help. Reach out to our team
-                and we&apos;ll get back to you as soon as possible.
+                ¿Tienes preguntas? Estamos aquí para ayudarte. Contacta con
+                nuestro equipo y te responderemos lo antes posible.
               </p>
             </div>
 
@@ -27,11 +27,12 @@ export default function ContactPage() {
               <div className="space-y-8">
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-                    Contact Information
+                    Información de Contacto
                   </h2>
                   <p className="text-gray-600 mb-8">
-                    Feel free to reach out through any of these channels. Our
-                    concierge team is available 24/7 to assist you.
+                    No dudes en ponerte en contacto a través de cualquiera de
+                    estos canales. Nuestro equipo de conserjería está disponible
+                    24/7 para asistirte en lo que necesites.
                   </p>
                 </div>
 
@@ -42,12 +43,12 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">
-                        Address
+                        Dirección
                       </h3>
                       <p className="text-gray-600">
-                        123 Luxury Avenue
+                        Avenida del Lujo 123
                         <br />
-                        Paradise Island, PI 12345
+                        Isla Paraíso, IP 12345
                       </p>
                     </div>
                   </div>
@@ -58,9 +59,9 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">
-                        Phone
+                        Teléfono
                       </h3>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
+                      <p className="text-gray-600">+34 (555) 123-4567</p>
                     </div>
                   </div>
 
@@ -72,7 +73,7 @@ export default function ContactPage() {
                       <h3 className="font-semibold text-gray-900 mb-1">
                         Email
                       </h3>
-                      <p className="text-gray-600">info@lu.com</p>
+                      <p className="text-gray-600">info@hotellujo.com</p>
                     </div>
                   </div>
                 </div>
@@ -81,7 +82,7 @@ export default function ContactPage() {
               {/* Contact Form */}
               <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  Send us a Message
+                  Envíanos un Mensaje
                 </h2>
                 <form className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
@@ -90,12 +91,12 @@ export default function ContactPage() {
                         htmlFor="firstName"
                         className="block text-sm font-medium text-gray-700 mb-2"
                       >
-                        First Name
+                        Nombre
                       </label>
                       <Input
                         id="firstName"
                         type="text"
-                        placeholder="John"
+                        placeholder="Juan"
                         className="w-full"
                       />
                     </div>
@@ -104,12 +105,12 @@ export default function ContactPage() {
                         htmlFor="lastName"
                         className="block text-sm font-medium text-gray-700 mb-2"
                       >
-                        Last Name
+                        Apellidos
                       </label>
                       <Input
                         id="lastName"
                         type="text"
-                        placeholder="Doe"
+                        placeholder="Pérez"
                         className="w-full"
                       />
                     </div>
@@ -120,12 +121,12 @@ export default function ContactPage() {
                       htmlFor="email"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Email
+                      Correo Electrónico
                     </label>
                     <Input
                       id="email"
                       type="email"
-                      placeholder="john.doe@example.com"
+                      placeholder="juan.perez@ejemplo.com"
                       className="w-full"
                     />
                   </div>
@@ -135,12 +136,12 @@ export default function ContactPage() {
                       htmlFor="phone"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Phone Number
+                      Número de Teléfono
                     </label>
                     <Input
                       id="phone"
                       type="tel"
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="+34 600 000 000"
                       className="w-full"
                     />
                   </div>
@@ -150,12 +151,12 @@ export default function ContactPage() {
                       htmlFor="message"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Message
+                      Mensaje
                     </label>
                     <textarea
                       id="message"
                       rows={5}
-                      placeholder="Tell us how we can help you..."
+                      placeholder="Cuéntanos cómo podemos ayudarte..."
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-none"
                     />
                   </div>
@@ -164,7 +165,7 @@ export default function ContactPage() {
                     type="submit"
                     className="w-full bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-700 hover:to-yellow-600 text-white py-3"
                   >
-                    Send Message
+                    Enviar Mensaje
                   </Button>
                 </form>
               </div>

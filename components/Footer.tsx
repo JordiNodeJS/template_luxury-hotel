@@ -31,9 +31,9 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-gray-400 mb-8 leading-relaxed">
-              Experience unparalleled luxury and comfort in our world-class
-              resort. Every moment is crafted to perfection for your ultimate
-              satisfaction.
+              Vive una experiencia de lujo y confort sin igual en nuestro resort
+              de clase mundial. Cada momento está diseñado a la perfección para
+              tu máxima satisfacción y disfrute absoluto.
             </p>
             <div className="flex gap-4">
               <a
@@ -68,15 +68,15 @@ export default function Footer() {
 
           {/* Column 2 - Explore Links */}
           <div>
-            <h6 className="text-lg font-bold mb-6">Explore Links</h6>
+            <h6 className="text-lg font-bold mb-6">Enlaces Rápidos</h6>
             <ul className="space-y-3">
               {[
-                { name: "Home", href: "/" },
-                { name: "About Us", href: "/about" },
-                { name: "Rooms", href: "/rooms" },
-                { name: "Services", href: "/services" },
+                { name: "Inicio", href: "/" },
+                { name: "Nosotros", href: "/about" },
+                { name: "Habitaciones", href: "/rooms" },
+                { name: "Servicios", href: "/services" },
                 { name: "Blog", href: "/blog" },
-                { name: "Contact", href: "/contact" },
+                { name: "Contacto", href: "/contact" },
               ].map((item) => (
                 <li key={item.name}>
                   <Link
@@ -92,15 +92,15 @@ export default function Footer() {
 
           {/* Column 3 - Services */}
           <div>
-            <h6 className="text-lg font-bold mb-6">Services</h6>
+            <h6 className="text-lg font-bold mb-6">Servicios</h6>
             <ul className="space-y-3">
               {[
                 "Spa & Wellness",
-                "Fine Dining",
-                "Yacht Charter",
-                "Airport Transfer",
-                "Concierge",
-                "Business Center",
+                "Gastronomía Gourmet",
+                "Alquiler de Yates",
+                "Traslado al Aeropuerto",
+                "Conserjería",
+                "Centro de Negocios",
               ].map((item) => (
                 <li key={item}>
                   <Link
@@ -116,15 +116,15 @@ export default function Footer() {
 
           {/* Column 4 - Support & Contact */}
           <div>
-            <h6 className="text-lg font-bold mb-6">Support</h6>
+            <h6 className="text-lg font-bold mb-6">Soporte</h6>
             <ul className="space-y-3 mb-8">
               {[
-                "Help Center",
-                "Privacy Policy",
-                "Terms of Service",
-                "Cancellation Policy",
-                "FAQ",
-                "Feedback",
+                "Centro de Ayuda",
+                "Política de Privacidad",
+                "Términos de Servicio",
+                "Política de Cancelación",
+                "Preguntas Frecuentes",
+                "Comentarios",
               ].map((item) => (
                 <li key={item}>
                   <Link
@@ -137,7 +137,7 @@ export default function Footer() {
               ))}
             </ul>
 
-            <h6 className="text-lg font-bold mb-6">Contact Info</h6>
+            <h6 className="text-lg font-bold mb-6">Información de Contacto</h6>
             <ul className="space-y-4 text-gray-400">
               <li className="flex items-start gap-3 hover:text-gray-300 transition-colors">
                 <MapPin
@@ -145,18 +145,18 @@ export default function Footer() {
                   className="flex-shrink-0 mt-1 text-yellow-500"
                 />
                 <span>
-                  123 Luxury Avenue
+                  Avenida del Lujo 123
                   <br />
-                  Paradise Island, PI 12345
+                  Isla Paraíso, IP 12345
                 </span>
               </li>
               <li className="flex items-center gap-3 hover:text-gray-300 transition-colors">
                 <Phone size={20} className="flex-shrink-0 text-yellow-500" />
-                <span>+1 (555) 123-4567</span>
+                <span>+34 (555) 123-4567</span>
               </li>
               <li className="flex items-center gap-3 hover:text-gray-300 transition-colors">
                 <Mail size={20} className="flex-shrink-0 text-yellow-500" />
-                <span>info@lu.com</span>
+                <span>info@hotellujo.com</span>
               </li>
             </ul>
           </div>
@@ -166,26 +166,26 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8 mt-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-400 text-sm">
-              © 2025 Luxury Hotel. All rights reserved.
+              © 2025 Hotel de Lujo. Todos los derechos reservados.
             </p>
             <div className="flex gap-6 text-sm">
               <Link
                 href="#"
                 className="text-gray-400 hover:text-yellow-400 hover:underline transition-all duration-300"
               >
-                Privacy Policy
+                Política de Privacidad
               </Link>
               <Link
                 href="#"
                 className="text-gray-400 hover:text-yellow-400 hover:underline transition-all duration-300"
               >
-                Terms of Service
+                Términos de Servicio
               </Link>
               <Link
                 href="#"
                 className="text-gray-400 hover:text-yellow-400 hover:underline transition-all duration-300"
               >
-                Cookie Policy
+                Política de Cookies
               </Link>
             </div>
           </div>

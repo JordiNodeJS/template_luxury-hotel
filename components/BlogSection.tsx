@@ -11,30 +11,30 @@ export default function BlogSection() {
   const posts = [
     {
       image: "/images/blog/blog1.jpg",
-      category: "Wellness",
-      date: "March 15, 2025",
+      category: "Bienestar",
+      date: "15 de Marzo, 2025",
       author: "Admin",
-      title: "Swimming Health Benefits",
+      title: "Beneficios de la Natación para tu Salud",
       excerpt:
-        "Discover the amazing health benefits of swimming and how our infinity pool can enhance your wellness journey during your stay.",
+        "Descubre los increíbles beneficios de la natación y cómo nuestra piscina infinita puede potenciar tu bienestar durante tu estancia en nuestro resort de lujo.",
     },
     {
       image: "/images/blog/blog2.jpg",
-      category: "Travel Tips",
-      date: "March 12, 2025",
+      category: "Consejos de Viaje",
+      date: "12 de Marzo, 2025",
       author: "Admin",
-      title: "Best Booking Service Tips",
+      title: "Guía para Reservar tu Estancia Perfecta",
       excerpt:
-        "Learn insider tips for getting the best deals and making the most of your luxury hotel booking experience with our expert advice.",
+        "Conoce los consejos de nuestros expertos para obtener las mejores ofertas y aprovechar al máximo tu experiencia de reserva en nuestro hotel de lujo.",
     },
     {
       image: "/images/blog/blog1.jpg",
-      category: "Interior Design",
-      date: "March 10, 2025",
+      category: "Diseño Interior",
+      date: "10 de Marzo, 2025",
       author: "Admin",
-      title: "Hotel Bedroom Collection",
+      title: "Colección de Suites de Ensueño",
       excerpt:
-        "Take a behind-the-scenes look at our carefully curated bedroom collections and the luxury amenities that make each stay special.",
+        "Un vistazo exclusivo a nuestras colecciones de dormitorios cuidadosamente diseñadas y las amenidades premium que hacen de cada estancia una experiencia única.",
     },
   ];
 
@@ -44,13 +44,13 @@ export default function BlogSection() {
         <div className="flex items-center justify-between mb-12 lg:mb-16">
           <div>
             <p className="text-yellow-600 font-semibold mb-3 tracking-wider uppercase text-sm">
-              LATEST BLOG
+              ÚLTIMAS PUBLICACIONES
             </p>
             <h2
               className="text-3xl md:text-4xl lg:text-[35.2px] leading-[1.2] font-bold text-[rgb(51,51,51)]"
               style={{ fontWeight: 700 }}
             >
-              News & Update
+              Noticias y Novedades
             </h2>
           </div>
           <Button
@@ -59,7 +59,7 @@ export default function BlogSection() {
             className="hidden md:inline-flex items-center gap-2 hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-600 transition-all"
           >
             <Link href="#">
-              View All Posts
+              Ver Todas las Publicaciones
               <ArrowRight size={18} />
             </Link>
           </Button>
@@ -92,7 +92,7 @@ export default function BlogSection() {
                   </div>
                   <div className="flex items-center gap-1.5">
                     <User size={16} />
-                    <span>By {post.author}</span>
+                    <span>Por {post.author}</span>
                   </div>
                 </div>
 
@@ -108,7 +108,7 @@ export default function BlogSection() {
                   href="#"
                   className="inline-flex items-center gap-2 text-yellow-600 hover:text-yellow-700 font-medium group/link"
                 >
-                  Read More
+                  Leer Más
                   <ArrowRight
                     size={18}
                     className="transition-transform group-hover/link:translate-x-1"
@@ -126,7 +126,7 @@ export default function BlogSection() {
             className="inline-flex items-center gap-2"
           >
             <Link href="#">
-              View All Posts
+              Ver Todas las Publicaciones
               <ArrowRight size={18} />
             </Link>
           </Button>

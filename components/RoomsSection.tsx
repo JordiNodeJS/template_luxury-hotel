@@ -30,31 +30,31 @@ export default function RoomsSection() {
       image: "/images/rooms/room1.jpg",
       badge: "POPULAR",
       badgeColor: "bg-yellow-500",
-      title: "Super Deluxe Room",
+      title: "Suite Deluxe Premium",
       description:
-        "Spacious and elegantly appointed room with premium amenities and stunning city views.",
+        "Espaciosa suite elegantemente decorada con amenidades premium, diseño contemporáneo y vistas espectaculares de la ciudad que te dejarán sin aliento.",
       rating: 5.0,
       reviews: 120,
       price: 299,
       amenities: [
-        { icon: <Bed size={18} />, text: "King Bed" },
-        { icon: <Bath size={18} />, text: "Marble Bath" },
-        { icon: <Mountain size={18} />, text: "City View" },
+        { icon: <Bed size={18} />, text: "Cama King" },
+        { icon: <Bath size={18} />, text: "Baño de Mármol" },
+        { icon: <Mountain size={18} />, text: "Vista Panorámica" },
       ],
     },
     {
       image: "/images/rooms/room2.jpg",
       badge: null,
       badgeColor: "",
-      title: "Super Deluxe Room",
+      title: "Suite Ejecutiva",
       description:
-        "Comfortable and stylish room perfect for couples, featuring modern amenities and elegant decor.",
+        "Habitación confortable y elegante, perfecta para parejas, con amenidades modernas, decoración sofisticada y todos los detalles pensados para tu comodidad.",
       rating: 4.8,
       reviews: 95,
       price: 199,
       amenities: [
-        { icon: <Bed size={18} />, text: "Double Bed" },
-        { icon: <Wine size={18} />, text: "Free WiFi" },
+        { icon: <Bed size={18} />, text: "Cama Doble" },
+        { icon: <Wine size={18} />, text: "WiFi Premium" },
         { icon: <Wine size={18} />, text: "Mini Bar" },
       ],
     },
@@ -62,16 +62,16 @@ export default function RoomsSection() {
       image: "/images/rooms/room3.jpg",
       badge: "PREMIUM",
       badgeColor: "bg-purple-600",
-      title: "Signature Room",
+      title: "Suite Signature",
       description:
-        "Our most luxurious accommodation featuring exclusive amenities and breathtaking ocean views.",
+        "Nuestro alojamiento más exclusivo con amenidades de lujo, jacuzzi privado, sala de estar independiente y vistas panorámicas al océano que te cautivarán.",
       rating: 5.0,
       reviews: 87,
       price: 499,
       amenities: [
-        { icon: <Bed size={18} />, text: "King Suite" },
-        { icon: <Bath size={18} />, text: "Private Jacuzzi" },
-        { icon: <Waves size={18} />, text: "Ocean View" },
+        { icon: <Bed size={18} />, text: "Suite King" },
+        { icon: <Bath size={18} />, text: "Jacuzzi Privado" },
+        { icon: <Waves size={18} />, text: "Vista al Mar" },
       ],
     },
   ];
@@ -85,16 +85,18 @@ export default function RoomsSection() {
       <div className="container mx-auto px-3 max-w-[1320px]">
         <div className="text-center mb-12 lg:mb-16">
           <p className="text-yellow-600 font-semibold mb-3 tracking-wider uppercase text-sm">
-            BEST LUXURY ROOMS
+            SUITES DE LUJO EXCLUSIVAS
           </p>
           <h2
             className="text-3xl md:text-4xl lg:text-[35.2px] leading-[1.2] font-bold text-[rgb(51,51,51)] mb-4"
             style={{ fontWeight: 700 }}
           >
-            Book your luxury stay
+            Reserva tu Escapada de Ensueño
           </h2>
           <p className="text-base lg:text-[16px] leading-relaxed text-[rgb(55,65,81)] max-w-3xl mx-auto">
-            Choose from our collection of meticulously designed rooms and suites
+            Descubre nuestra colección de habitaciones y suites diseñadas
+            meticulosamente para ofrecerte el máximo confort, elegancia y
+            exclusividad
           </p>
         </div>
 
@@ -172,7 +174,7 @@ export default function RoomsSection() {
                       asChild
                       className="bg-indigo-600 hover:bg-indigo-700 text-white shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] hover:shadow-md transition-all duration-300 rounded-full px-8 py-3 text-[15.2px] font-semibold"
                     >
-                      <Link href="#booking">Book Now</Link>
+                      <Link href="#booking">Reservar Ahora</Link>
                     </Button>
                   </CardFooter>
                 </Card>

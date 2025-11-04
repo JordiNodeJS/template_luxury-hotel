@@ -37,7 +37,7 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
               <Star className="fill-yellow-400 text-yellow-400" size={20} />
               <span className="font-medium text-[15px]">
-                5 Star Luxury Hotel & Best Resort
+                Resort de Lujo 5 Estrellas Premiado
               </span>
             </div>
 
@@ -45,13 +45,14 @@ export default function Hero() {
               className="text-[56px] leading-[1.2] font-bold mb-6"
               style={{ fontWeight: 700 }}
             >
-              Best Luxury hotel In the world.
+              Tu Santuario de Lujo y Exclusividad
             </h1>
 
             <p className="text-[19.2px] leading-[1.6] mb-8 text-white">
-              Experience unparalleled luxury and comfort in our world-class
-              resort. From breathtaking views to exceptional service, every
-              moment is crafted to perfection.
+              Sumérgete en una experiencia única donde el lujo se fusiona con la
+              naturaleza. Disfruta de instalaciones de primera clase, atención
+              personalizada y momentos inolvidables en cada rincón de nuestro
+              resort.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -59,14 +60,14 @@ export default function Hero() {
                 href="/rooms"
                 className="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transition-all hover:shadow-md font-semibold text-[15.2px] inline-flex items-center gap-2"
               >
-                Explore Rooms
+                Ver Habitaciones
                 <ArrowRight size={20} />
               </a>
               <a
                 href="/about"
                 className="bg-transparent text-white px-8 py-3 rounded-full hover:bg-white/10 transition-all font-semibold text-[15.2px] border border-white/30"
               >
-                Learn More
+                Descubre Más
               </a>
             </div>
           </div>
@@ -77,10 +78,10 @@ export default function Hero() {
             style={{ padding: "32px" }}
           >
             <h3 className="text-[28px] font-bold text-gray-900 mb-2">
-              Book Your Stay
+              Reserva tu Estancia
             </h3>
             <p className="text-gray-600 mb-6 text-[16px]">
-              Find the perfect room for your luxury getaway
+              Encuentra la suite perfecta para tu escape de lujo
             </p>
             <BookingForm />
           </div>
