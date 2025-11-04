@@ -11,6 +11,7 @@ import {
   Fish,
   Anchor,
 } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 export default function ServicesGallery() {
   const services = [
@@ -65,16 +66,13 @@ export default function ServicesGallery() {
   ];
 
   return (
-    <section className="py-12 bg-[rgb(248,250,252)]">
+    <section className="py-12 bg-muted/50">
       <div className="container mx-auto px-3 max-w-[1320px]">
         <div className="text-center mb-12">
-          <p className="text-yellow-600 font-semibold mb-3 tracking-wider uppercase text-sm">
+          <Badge variant="outline" className="mb-3">
             SERVICIOS PREMIUM
-          </p>
-          <h2
-            className="text-[35.2px] leading-[1.2] font-bold text-[rgb(51,51,51)] mb-4"
-            style={{ fontWeight: 700 }}
-          >
+          </Badge>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Explora Nuestros Servicios de Lujo
           </h2>
         </div>
@@ -83,9 +81,9 @@ export default function ServicesGallery() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="relative h-64 lg:h-72 rounded-xl overflow-hidden group cursor-pointer hover:-translate-y-2 transition-all duration-300"
+              className="relative h-64 lg:h-72 rounded-lg overflow-hidden group cursor-pointer hover:-translate-y-2 transition-all duration-300"
             >
-              {/* Background Image - Optimized */}
+              {/* Background Image */}
               <Image
                 src={service.image}
                 alt={service.title}
@@ -95,16 +93,15 @@ export default function ServicesGallery() {
                 sizes="(max-width: 768px) 50vw, 25vw"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-yellow-900/80 group-hover:via-yellow-800/50 transition-all duration-300 z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-primary/80 group-hover:via-primary/50 transition-all duration-300 z-10"></div>
 
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4 text-center z-20">
-                <div className="w-16 h-16 bg-yellow-500/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 group-hover:bg-yellow-500/40 group-hover:scale-110 transition-all duration-300">
+                <div className="w-16 h-16 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/40 group-hover:scale-110 transition-all duration-300">
                   {service.icon}
                 </div>
 
-                {/* Title with slide-up animation from bottom on hover */}
                 <div className="relative overflow-hidden h-16">
-                  <h5 className="text-xl font-bold mb-1 absolute inset-x-0 translate-y-20 group-hover:translate-y-0 group-hover:text-yellow-300 transition-all duration-500 ease-out">
+                  <h5 className="text-xl font-bold mb-1 absolute inset-x-0 translate-y-20 group-hover:translate-y-0 transition-all duration-500 ease-out">
                     {service.title}
                   </h5>
                 </div>

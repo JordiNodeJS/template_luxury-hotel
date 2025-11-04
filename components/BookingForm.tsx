@@ -30,7 +30,7 @@ export default function BookingForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid md:grid-cols-2 gap-4 md:gap-6">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium mb-2">
             Fecha de Entrada
           </label>
           <Input
@@ -42,7 +42,7 @@ export default function BookingForm() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium mb-2">
             Fecha de Salida
           </label>
           <Input
@@ -57,13 +57,11 @@ export default function BookingForm() {
 
       <div className="grid md:grid-cols-2 gap-4 md:gap-6">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Adultos
-          </label>
+          <label className="block text-sm font-medium mb-2">Adultos</label>
           <select
             value={adults}
             onChange={(e) => setAdults(e.target.value)}
-            className="w-full px-4 h-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-background"
+            className="w-full px-4 h-12 border rounded-md focus:ring-2 focus:ring-primary bg-background"
           >
             <option value="1">1 Adulto</option>
             <option value="2">2 Adultos</option>
@@ -72,13 +70,11 @@ export default function BookingForm() {
           </select>
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Niños
-          </label>
+          <label className="block text-sm font-medium mb-2">Niños</label>
           <select
             value={children}
             onChange={(e) => setChildren(e.target.value)}
-            className="w-full px-4 h-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-background"
+            className="w-full px-4 h-12 border rounded-md focus:ring-2 focus:ring-primary bg-background"
           >
             <option value="0">0 Niños</option>
             <option value="1">1 Niño</option>
@@ -88,11 +84,7 @@ export default function BookingForm() {
         </div>
       </div>
 
-      <Button
-        type="submit"
-        className="w-full h-12 bg-indigo-600 hover:bg-indigo-700 text-white shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] hover:shadow-md transition-all duration-300 rounded-full px-8 text-[15.2px] font-semibold"
-        size="lg"
-      >
+      <Button type="submit" className="w-full" size="lg">
         <Search size={20} />
         Buscar Disponibilidad
       </Button>

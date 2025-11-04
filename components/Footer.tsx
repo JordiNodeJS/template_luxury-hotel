@@ -13,7 +13,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-gray-800 text-white py-12">
+    <footer id="contact" className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-3 max-w-[1320px]">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-16 mb-12">
           {/* Column 1 - Brand */}
@@ -26,11 +26,11 @@ export default function Footer() {
                 height={40}
                 className="w-10 h-10 transition-transform group-hover:scale-110"
               />
-              <span className="text-xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent">
+              <span className="text-xl font-bold text-primary">
                 Luxury Hotel
               </span>
             </Link>
-            <p className="text-gray-400 mb-8 leading-relaxed">
+            <p className="text-muted-foreground mb-8 leading-relaxed">
               Vive una experiencia de lujo y confort sin igual en nuestro resort
               de clase mundial. Cada momento está diseñado a la perfección para
               tu máxima satisfacción y disfrute absoluto.
@@ -40,7 +40,7 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-600 hover:scale-110 transition-all duration-300"
+                className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
@@ -49,7 +49,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-600 hover:scale-110 transition-all duration-300"
+                className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
@@ -58,7 +58,7 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-600 hover:scale-110 transition-all duration-300"
+                className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
@@ -81,7 +81,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-gray-400 hover:text-yellow-400 hover:underline transition-all duration-300 inline-block"
+                    className="text-muted-foreground hover:text-primary hover:underline transition-all duration-300 inline-block"
                   >
                     {item.name}
                   </Link>
@@ -105,7 +105,7 @@ export default function Footer() {
                 <li key={item}>
                   <Link
                     href="/services"
-                    className="text-gray-400 hover:text-yellow-400 hover:underline transition-all duration-300 inline-block"
+                    className="text-muted-foreground hover:text-primary hover:underline transition-all duration-300 inline-block"
                   >
                     {item}
                   </Link>
@@ -129,7 +129,7 @@ export default function Footer() {
                 <li key={item}>
                   <Link
                     href="#"
-                    className="text-gray-400 hover:text-yellow-400 hover:underline transition-all duration-300 inline-block"
+                    className="text-muted-foreground hover:text-primary hover:underline transition-all duration-300 inline-block"
                   >
                     {item}
                   </Link>
@@ -138,24 +138,21 @@ export default function Footer() {
             </ul>
 
             <h6 className="text-lg font-bold mb-6">Información de Contacto</h6>
-            <ul className="space-y-4 text-gray-400">
-              <li className="flex items-start gap-3 hover:text-gray-300 transition-colors">
-                <MapPin
-                  size={20}
-                  className="flex-shrink-0 mt-1 text-yellow-500"
-                />
+            <ul className="space-y-4 text-muted-foreground">
+              <li className="flex items-start gap-3 hover:text-foreground transition-colors">
+                <MapPin size={20} className="flex-shrink-0 mt-1 text-primary" />
                 <span>
                   Avenida del Lujo 123
                   <br />
                   Isla Paraíso, IP 12345
                 </span>
               </li>
-              <li className="flex items-center gap-3 hover:text-gray-300 transition-colors">
-                <Phone size={20} className="flex-shrink-0 text-yellow-500" />
+              <li className="flex items-center gap-3 hover:text-foreground transition-colors">
+                <Phone size={20} className="flex-shrink-0 text-primary" />
                 <span>+34 (555) 123-4567</span>
               </li>
-              <li className="flex items-center gap-3 hover:text-gray-300 transition-colors">
-                <Mail size={20} className="flex-shrink-0 text-yellow-500" />
+              <li className="flex items-center gap-3 hover:text-foreground transition-colors">
+                <Mail size={20} className="flex-shrink-0 text-primary" />
                 <span>info@hotellujo.com</span>
               </li>
             </ul>
@@ -165,25 +162,25 @@ export default function Footer() {
         {/* Copyright Bar */}
         <div className="border-t border-gray-800 pt-8 mt-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-gray-400 text-sm">
+            <p className="text-muted-foreground text-sm">
               © 2025 Hotel de Lujo. Todos los derechos reservados.
             </p>
             <div className="flex gap-6 text-sm">
               <Link
                 href="#"
-                className="text-gray-400 hover:text-yellow-400 hover:underline transition-all duration-300"
+                className="text-muted-foreground hover:text-primary hover:underline transition-all duration-300"
               >
                 Política de Privacidad
               </Link>
               <Link
                 href="#"
-                className="text-gray-400 hover:text-yellow-400 hover:underline transition-all duration-300"
+                className="text-muted-foreground hover:text-primary hover:underline transition-all duration-300"
               >
                 Términos de Servicio
               </Link>
               <Link
                 href="#"
-                className="text-gray-400 hover:text-yellow-400 hover:underline transition-all duration-300"
+                className="text-muted-foreground hover:text-primary hover:underline transition-all duration-300"
               >
                 Política de Cookies
               </Link>

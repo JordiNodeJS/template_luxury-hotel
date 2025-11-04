@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import Rating from "@/components/ui/rating";
 import {
   Carousel,
@@ -40,23 +41,17 @@ export default function TestimonialsSection() {
   return (
     <section
       ref={ref}
-      className={cn(
-        "bg-[rgb(249,249,249)] py-12 fade-in-up",
-        isInView && "in-view"
-      )}
+      className={cn("bg-muted/50 py-12 fade-in-up", isInView && "in-view")}
     >
       <div className="container mx-auto px-3 max-w-[1320px]">
         <div className="text-center mb-12 lg:mb-16">
-          <p className="text-yellow-600 font-semibold mb-3 tracking-wider uppercase text-sm">
+          <Badge variant="outline" className="mb-3">
             TESTIMONIOS DE NUESTROS HUÉSPEDES
-          </p>
-          <h2
-            className="text-3xl md:text-4xl lg:text-[35.2px] leading-[1.2] font-bold text-[rgb(51,51,51)] mb-4"
-            style={{ fontWeight: 700 }}
-          >
+          </Badge>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Lo que Dicen Nuestros Clientes
           </h2>
-          <p className="text-base lg:text-[16px] leading-relaxed text-[rgb(55,65,81)] max-w-3xl mx-auto">
+          <p className="text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
             Descubre las experiencias inolvidables que nuestros huéspedes han
             vivido y lo que opinan sobre su estancia en nuestro resort de lujo
           </p>
@@ -75,10 +70,10 @@ export default function TestimonialsSection() {
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2">
-                <Card className="hover:shadow-2xl transition-all duration-300 relative bg-white hover:-translate-y-1 h-full">
+                <Card className="hover:shadow-2xl transition-all duration-300 relative hover:-translate-y-1 h-full">
                   <CardContent className="p-8 lg:p-10">
                     <Quote
-                      className="absolute top-8 right-8 text-yellow-100"
+                      className="absolute top-8 right-8 text-muted/20"
                       size={64}
                     />
 
@@ -88,7 +83,7 @@ export default function TestimonialsSection() {
                       className="mb-6"
                     />
 
-                    <p className="text-gray-700 text-lg mb-8 italic leading-relaxed relative z-10">
+                    <p className="text-lg mb-8 italic leading-relaxed relative z-10">
                       &ldquo;{testimonial.text}&rdquo;
                     </p>
 
@@ -99,14 +94,14 @@ export default function TestimonialsSection() {
                           alt={testimonial.name}
                           width={64}
                           height={64}
-                          className="w-16 h-16 rounded-full object-cover border-4 border-yellow-400 shadow-lg"
+                          className="w-16 h-16 rounded-full object-cover border-4 border-primary shadow-lg"
                         />
                       </div>
                       <div>
-                        <h6 className="text-lg font-bold text-gray-900">
+                        <h6 className="text-lg font-bold">
                           {testimonial.name}
                         </h6>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-muted-foreground">
                           {testimonial.role}
                         </p>
                       </div>
@@ -116,8 +111,8 @@ export default function TestimonialsSection() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-12 bg-white/90 hover:bg-yellow-500 hover:text-white border-2 border-gray-200 hover:border-yellow-500 shadow-lg transition-all duration-300" />
-          <CarouselNext className="hidden md:flex -right-12 bg-white/90 hover:bg-yellow-500 hover:text-white border-2 border-gray-200 hover:border-yellow-500 shadow-lg transition-all duration-300" />
+          <CarouselPrevious className="hidden md:flex -left-12" />
+          <CarouselNext className="hidden md:flex -right-12" />
         </Carousel>
       </div>
     </section>

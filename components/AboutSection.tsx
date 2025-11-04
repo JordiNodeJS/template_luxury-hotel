@@ -28,16 +28,13 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="bg-[rgb(248,250,252)] py-12">
+    <section id="about" className="bg-muted/50 py-12">
       <div className="container mx-auto px-3 max-w-[1320px]">
         <div className="text-center mb-12 lg:mb-16">
-          <h2
-            className="text-3xl md:text-4xl lg:text-[35.2px] leading-[1.2] font-bold text-[rgb(51,51,51)] mb-4"
-            style={{ fontWeight: 700 }}
-          >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Tu Experiencia Comienza con Nuestra Excelencia
           </h2>
-          <p className="text-base lg:text-[16px] leading-relaxed text-[rgb(55,65,81)] max-w-3xl mx-auto">
+          <p className="text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
             Desde el primer contacto hasta el último momento de tu estadía,
             nuestro equipo se dedica a crear experiencias memorables que superan
             todas tus expectativas. Cada detalle cuenta en tu viaje hacia el
@@ -45,20 +42,20 @@ export default function AboutSection() {
           </p>
         </div>
 
-        {/* Features Grid - NO background, NO shadow, solo iconos y texto */}
+        {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-16 lg:mb-20">
           {features.map((feature, index) => (
             <div key={index} className="flex gap-4">
               <div className="flex-shrink-0">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 text-white rounded-full">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary text-primary-foreground rounded-full">
                   {feature.icon}
                 </div>
               </div>
               <div>
-                <h5 className="text-base md:text-[16px] font-bold text-[rgb(31,41,55)] mb-1">
+                <h5 className="text-base md:text-lg font-bold mb-1">
                   {feature.title}
                 </h5>
-                <p className="text-sm md:text-[14px] text-[rgb(55,65,81)] leading-relaxed">
+                <p className="text-sm md:text-base text-muted-foreground">
                   {feature.description}
                 </p>
               </div>
@@ -69,7 +66,7 @@ export default function AboutSection() {
         {/* Grid asimétrico creativo: 1 imagen grande + 2 pequeñas apiladas */}
         <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
           {/* Imagen grande (ocupa toda la altura en desktop) */}
-          <div className="md:row-span-2 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 group">
+          <div className="md:row-span-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 group">
             <div className="relative h-full min-h-[400px] md:min-h-[600px]">
               <Image
                 src="/images/aboutus/hotelservice.jpg"
@@ -82,7 +79,7 @@ export default function AboutSection() {
           </div>
 
           {/* Imagen pequeña 1 */}
-          <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 group">
+          <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 group">
             <div className="relative h-[280px] md:h-[290px]">
               <Image
                 src="/images/aboutus/luxurypool.jpg"
@@ -95,7 +92,7 @@ export default function AboutSection() {
           </div>
 
           {/* Imagen pequeña 2 */}
-          <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 group">
+          <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 group">
             <div className="relative h-[280px] md:h-[290px]">
               <Image
                 src="/images/aboutus/finedining.jpg"

@@ -28,7 +28,7 @@ export default function BottomBooking() {
 
   return (
     <section id="booking" className="relative py-20 overflow-hidden">
-      {/* Background Image - Optimized */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/banner_bg.jpg"
@@ -47,10 +47,10 @@ export default function BottomBooking() {
 
       <div className="container mx-auto px-3 relative z-10 max-w-[1320px]">
         <div className="text-center text-white mb-8">
-          <h3 className="text-[28px] font-bold mb-3">
+          <h3 className="text-3xl font-bold mb-3">
             ¿Listo para tus Vacaciones de Ensueño?
           </h3>
-          <p className="text-[16px] text-gray-200">
+          <p className="text-base text-white/90">
             Reserva tu escapada de lujo hoy y crea recuerdos que durarán toda la
             vida
           </p>
@@ -71,7 +71,7 @@ export default function BottomBooking() {
                 value={checkIn}
                 onChange={(e) => setCheckIn(e.target.value)}
                 required
-                className="bg-white/95 border-white/30 text-gray-900 h-12"
+                className="bg-white/95 border-white/30 h-12"
               />
             </div>
 
@@ -85,7 +85,7 @@ export default function BottomBooking() {
                 value={checkOut}
                 onChange={(e) => setCheckOut(e.target.value)}
                 required
-                className="bg-white/95 border-white/30 text-gray-900 h-12"
+                className="bg-white/95 border-white/30 h-12"
               />
             </div>
 
@@ -97,7 +97,7 @@ export default function BottomBooking() {
               <select
                 value={adults}
                 onChange={(e) => setAdults(e.target.value)}
-                className="w-full px-4 h-12 border border-white/30 bg-white/95 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-gray-900"
+                className="w-full px-4 h-12 border border-white/30 bg-white/95 rounded-md focus:ring-2 focus:ring-primary"
               >
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -114,7 +114,7 @@ export default function BottomBooking() {
               <select
                 value={children}
                 onChange={(e) => setChildren(e.target.value)}
-                className="w-full px-4 h-12 border border-white/30 bg-white/95 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-gray-900"
+                className="w-full px-4 h-12 border border-white/30 bg-white/95 rounded-md focus:ring-2 focus:ring-primary"
               >
                 <option value="0">0</option>
                 <option value="1">1</option>
@@ -127,7 +127,7 @@ export default function BottomBooking() {
           <Button
             type="submit"
             size="lg"
-            className="w-full md:w-auto mt-6 md:mt-8 bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-700 hover:to-yellow-600 text-white shadow-xl hover:shadow-2xl transition-all duration-300 h-12 px-12"
+            className="w-full md:w-auto mt-6 md:mt-8 h-12 px-12"
           >
             <Search className="mr-2" size={20} />
             Buscar Disponibilidad

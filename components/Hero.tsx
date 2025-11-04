@@ -3,6 +3,9 @@
 import { Star, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import BookingForm from "@/components/BookingForm";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardHeader, CardContent } from "@/components/ui/card";
 
 export default function Hero() {
   return (
@@ -34,21 +37,18 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <div className="text-white max-w-xl">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-              <Star className="fill-yellow-400 text-yellow-400" size={20} />
-              <span className="font-medium text-[15px]">
+            <Badge variant="secondary" className="mb-6 gap-2">
+              <Star className="fill-primary text-primary" size={20} />
+              <span className="font-medium">
                 Resort de Lujo 5 Estrellas Premiado
               </span>
-            </div>
+            </Badge>
 
-            <h1
-              className="text-[56px] leading-[1.2] font-bold mb-6"
-              style={{ fontWeight: 700 }}
-            >
+            <h1 className="text-5xl lg:text-6xl font-bold mb-6">
               Tu Santuario de Lujo y Exclusividad
             </h1>
 
-            <p className="text-[19.2px] leading-[1.6] mb-8 text-white">
+            <p className="text-lg leading-relaxed mb-8 text-white/90">
               Sumérgete en una experiencia única donde el lujo se fusiona con la
               naturaleza. Disfruta de instalaciones de primera clase, atención
               personalizada y momentos inolvidables en cada rincón de nuestro
@@ -56,35 +56,30 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <a
-                href="/rooms"
-                className="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transition-all hover:shadow-md font-semibold text-[15.2px] inline-flex items-center gap-2"
-              >
-                Ver Habitaciones
-                <ArrowRight size={20} />
-              </a>
-              <a
-                href="/about"
-                className="bg-transparent text-white px-8 py-3 rounded-full hover:bg-white/10 transition-all font-semibold text-[15.2px] border border-white/30"
-              >
-                Descubre Más
-              </a>
+              <Button size="lg" asChild>
+                <a href="/rooms">
+                  Ver Habitaciones
+                  <ArrowRight size={20} />
+                </a>
+              </Button>
+              <Button size="lg" variant="secondary" asChild>
+                <a href="/about">Descubre Más</a>
+              </Button>
             </div>
           </div>
 
           {/* Right Content - Booking Form */}
-          <div
-            className="bg-white rounded-xl shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1)] max-w-[636px]"
-            style={{ padding: "32px" }}
-          >
-            <h3 className="text-[28px] font-bold text-gray-900 mb-2">
-              Reserva tu Estancia
-            </h3>
-            <p className="text-gray-600 mb-6 text-[16px]">
-              Encuentra la suite perfecta para tu escape de lujo
-            </p>
-            <BookingForm />
-          </div>
+          <Card className="max-w-[636px]">
+            <CardHeader>
+              <h3 className="text-2xl font-bold">Reserva tu Estancia</h3>
+              <p className="text-muted-foreground">
+                Encuentra la suite perfecta para tu escape de lujo
+              </p>
+            </CardHeader>
+            <CardContent>
+              <BookingForm />
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

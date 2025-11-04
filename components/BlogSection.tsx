@@ -39,24 +39,21 @@ export default function BlogSection() {
   ];
 
   return (
-    <section id="blog" className="bg-white py-12">
+    <section id="blog" className="bg-background py-12">
       <div className="container mx-auto px-3 max-w-[1320px]">
         <div className="flex items-center justify-between mb-12 lg:mb-16">
           <div>
-            <p className="text-yellow-600 font-semibold mb-3 tracking-wider uppercase text-sm">
+            <Badge variant="outline" className="mb-3">
               ÚLTIMAS PUBLICACIONES
-            </p>
-            <h2
-              className="text-3xl md:text-4xl lg:text-[35.2px] leading-[1.2] font-bold text-[rgb(51,51,51)]"
-              style={{ fontWeight: 700 }}
-            >
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold">
               Noticias y Novedades
             </h2>
           </div>
           <Button
             asChild
             variant="outline"
-            className="hidden md:inline-flex items-center gap-2 hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-600 transition-all"
+            className="hidden md:inline-flex items-center gap-2"
           >
             <Link href="#">
               Ver Todas las Publicaciones
@@ -69,7 +66,7 @@ export default function BlogSection() {
           {posts.map((post, index) => (
             <Card
               key={index}
-              className="overflow-hidden hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2 bg-white"
+              className="overflow-hidden hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
             >
               <CardHeader className="p-0 relative h-56 overflow-hidden">
                 <Image
@@ -79,13 +76,11 @@ export default function BlogSection() {
                   height={300}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <Badge className="absolute top-4 left-4 bg-yellow-600 text-white hover:bg-yellow-700 shadow-lg">
-                  {post.category}
-                </Badge>
+                <Badge className="absolute top-4 left-4">{post.category}</Badge>
               </CardHeader>
 
               <CardContent className="p-6 lg:p-8 space-y-4">
-                <div className="flex items-center gap-4 text-sm text-gray-600">
+                <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <div className="flex items-center gap-1.5">
                     <Calendar size={16} />
                     <span>{post.date}</span>
@@ -96,17 +91,17 @@ export default function BlogSection() {
                   </div>
                 </div>
 
-                <h4 className="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-yellow-600 transition-colors">
+                <h4 className="text-xl md:text-2xl font-bold group-hover:text-primary transition-colors">
                   {post.title}
                 </h4>
 
-                <p className="text-sm md:text-base text-gray-600 line-clamp-3 leading-relaxed">
+                <p className="text-sm md:text-base text-muted-foreground line-clamp-3">
                   {post.excerpt}
                 </p>
 
                 <Link
                   href="#"
-                  className="inline-flex items-center gap-2 text-yellow-600 hover:text-yellow-700 font-medium group/link"
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium group/link"
                 >
                   Leer Más
                   <ArrowRight
